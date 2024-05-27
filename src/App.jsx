@@ -7,6 +7,10 @@ function App() {
   const [todos, setTodos] = useState([]);
   const [todoValue, setTodoValue] = useState("");
   const handleAdd = () => {
+     if (todoValue === ""){
+      alert("Please add inputs");
+      return;
+    };
     setTodos([todoValue, ...todos]);
     setTodoValue("");
   };
